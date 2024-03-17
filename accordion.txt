@@ -1,0 +1,85 @@
+
+        <section>
+          <div class="containeres">
+            <div class="accordion">
+              <div class="accordion-item" id="question1">
+                <a class="accordion-link" href="#question1">
+                  <div class="flex">
+                    <h3>WHY SHOULD KIDS LEARN A NEW LANGUAGE?</h3>
+                    <ul>
+                      <li>#Figma</li>
+                      <li>#Sketch</li>
+                      <li>#Adobe</li>
+                      <li>#Invision</li>
+                      <li>#Protopie</li>
+                    </ul>
+                  </div>
+                  <i class="icon ion-md-arrow-forward" style="color: black"></i>
+                  <i class="icon ion-md-arrow-down" style="color: black"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    Besides the usual reasons adults learn a new language
+                    (career opportunities or romance) there are plenty of other
+                    benefits for kids to learn a new language. Improved memory:
+                    Learning a foreign language involves memorizing vocabulary
+                    and grammar, which enhances overall memory function.
+                    According to a study published in the journal
+                    "Neuropsychology," bilingualism has been linked to better
+                    memory performance (Bialystok et al., 2004). Problem-solving
+                    skills: Language learning stimulates critical thinking and
+                    problem-solving abilities. Research published in the journal
+                    "Psychological Science" suggests that bilingual individuals
+                    excel in tasks that require cognitive control and
+                    problem-solving (Green & Abutalebi, 2013). Increased
+                    creativity: Language learners often find creative ways to
+                    express themselves. Studies, such as one published in
+                    "Frontiers in Psychology," have shown that bilingualism is
+                    associated with greater cognitive flexibility and divergent
+                    thinking, key components of creativity (Kharkhurin, 2012).
+                    Learn to overcome obstacles Discipline: Let's face it,
+                  </p>
+                </div>
+                <hr />
+              </div>
+              <div class="accordion-item" id="question2">
+                <a class="accordion-link" href="#question2">
+                  <div class="flex">
+                    <h3>WHY START EARLY?</h3>
+                    <ul>
+                      <li>#Figma</li>
+                      <li>#Sketch</li>
+                      <li>#Adobe</li>
+                      <li>#Invision</li>
+                      <li>#Protopie</li>
+                    </ul>
+                  </div>
+                  <i class="icon ion-md-arrow-forward" style="color: black"></i>
+                  <i class="icon ion-md-arrow-down" style="color: black"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    Kids get the opportunity to explore, do you (parents) still
+                    remember the foreign language you learnt years ago at school
+                    or at university. Chances are you won't remember much of it.
+                    Starting early gives children to explore their interests
+                    Children are just better at learning stuff Longer time to
+                    learn a language: The usual pathway to study in a university
+                    overseas will be to study a language intensively for 1-2
+                    years after SPM. Starting early gives gives them the
+                    opportunity to learn at a slower pace and enjoy the process
+                    more than just cramming things in your head to pass that
+                    next exam Save costs: Pre university foreign language
+                    courses can be quite heavy for students to bear in a short
+                    space of time. We help reduce these costs greatly and help
+                    parents space out the costs, so it will not feel as much a
+                    burden
+                  </p>
+                </div>
+                <hr />
+              </div>
+
+
+            </div>
+          </div>
+        </section>

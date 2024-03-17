@@ -593,7 +593,36 @@ section {
 }
 
 
+/* Class for desktop sizes */
+.custom-margin {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
 
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .custom-margin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+/* Add this media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .cards {
+    width: 100%; /* Adjust this value based on your design requirements */
+  }
+
+  .cards-content {
+    padding: 10px; /* Adjust padding if necessary */
+  }
+}
 
 
 /*-----------------------------------*\
@@ -628,7 +657,7 @@ section {
   color: var(--raisin-black-1);
   font-size: 3.6rem;
   font-weight: var(--fw-700);
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .nav-open-btn {
@@ -1162,7 +1191,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #677483; /* Adjust the color to match your site's theme */
+  background-color: #30547d; /* Adjust the color to match your site's theme */
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
@@ -1170,7 +1199,7 @@ section {
   font-size: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 40px;
   margin-left: 50px;
 }
@@ -1182,6 +1211,46 @@ section {
 .custom-back-button ion-icon {
   margin-right: 5px;
   font-size: 20px;
+}
+
+
+/* Add this media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .custom-back-button {
+    margin-left: 0; /* Remove margin-left on mobile screens */
+    margin-top: 50px;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .mobile-margin-top {
+    margin-top: 30px; 
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .buttonhomepage {
+    text-align: center;
+  }
 }
 
 
@@ -1701,8 +1770,15 @@ section {
 
 
 
+  .sectionz {
+    padding-block: 20px;
+    /* Include other properties if needed */
+  }
 
-
+  .sectiont {
+    padding-block: 20px;
+    /* Include other properties if needed */
+  }
 
 
 
