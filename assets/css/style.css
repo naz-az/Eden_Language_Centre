@@ -351,7 +351,7 @@ body {
   color: var(--white);
 }
 
-.btn-primary:is(:hover, :focus) { color: var(--raisin-black-1); }
+.btn-primary:is(:hover, :focus) { color: white }
 
 .btn-secondary {
   background-color: var(--mustard);
