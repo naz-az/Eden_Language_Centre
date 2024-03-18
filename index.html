@@ -127,10 +127,15 @@
 </div>
 
               <!-- Updated anchor tag with mailto: -->
-              <a class="hero-btn" aria-label="pixology promo">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                <span class="span">E-Mail Now</span>
-              </a>
+<button class="hero-btn" style="border: 2px solid #5a58e945; border-radius: 10px; padding-inline: 20px; height: 65px;">
+  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+  <span class="span">E-Mail Now</span>
+</button>
+
+
+
+
+
 
               </div>
 
@@ -191,9 +196,7 @@
         <!-- 
         - #SERVICE
       -->
-      <!-- 
-        - #SERVICE
-      -->
+
 
         <section class="sectiont service" id="service" aria-label="service">
           <div style="margin-top: 80px; margin-bottom: 80px;" class="container">
@@ -223,9 +226,12 @@
 </div>
 
 
-                  <h3 class="h3">
-                    <a href="german-roadmap.html" class="card-title">German</a>
-                  </h3>
+<div style="text-align: center;">
+  <h3 class="h3">
+    <a href="german-roadmap.html" class="card-title">German</a>
+  </h3>
+</div>
+
                 </div>
               </li>
               <li>
@@ -242,9 +248,14 @@
   </div>
 </div>
 
+<div style="text-align: center;">
+
                   <h3 class="h3">
                     <a href="#" class="card-title">French</a>
                   </h3>
+                  </div>
+
+
                 </div>
               </li>
 
@@ -260,9 +271,13 @@
                     />
                   </div>
 
+<div style="text-align: center;">
                   <h3 class="h3">
                     <a href="#" class="card-title">Spanish</a>
                   </h3>
+                                    </div>
+
+
                 </div>
               </li>
 
@@ -278,9 +293,13 @@
                     />
                   </div>
 
+<div style="text-align: center;">
+
                   <h3 class="h3">
                     <a href="#" class="card-title">Korean</a>
                   </h3>
+                                                      </div>
+
                 </div>
               </li>
 
@@ -1003,6 +1022,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonText.style.transform = 'rotateY(-180deg)';
       setTimeout(() => {
         buttonText.textContent = '+60174490672';
+        buttonText.style.color = 'black'; // Change text color to black
         button.classList.add('number-display'); // Add class to change background
       }, 300);
       isRotated = true;
@@ -1011,12 +1031,14 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonText.style.transform = 'rotateY(0deg)';
       setTimeout(() => {
         buttonText.textContent = 'Call Now';
+        buttonText.style.color = 'white'; // Change text color to white
         button.classList.remove('number-display'); // Remove class to revert background
       }, 300);
       isRotated = false;
     }
   });
 });
+
 
 
 </script>

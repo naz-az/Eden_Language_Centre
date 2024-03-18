@@ -419,6 +419,9 @@ body {
 
 
 
+
+
+
 *,
 *::before,
 *::after {
@@ -582,6 +585,7 @@ section {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
+  text-align: justify;
 
 }
 
@@ -589,7 +593,7 @@ section {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
-
+  text-align: justify;
 }
 
 
@@ -769,10 +773,23 @@ section {
   margin-block-end: 30px;
 }
 
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .hero-content .wrapper {
+      display: flex;
+      justify-content: center; /* Centers the items horizontally */
+      align-items: center; /* Centers the items vertically */
+      flex-direction: column; /* Stacks the flex items vertically */
+  }
+}
+
+
 .hero-btn {
   gap: 15px;
   color: var(--raisin-black-1);
   transition: var(--transition-1);
+  cursor: pointer;
 }
 
 .hero-btn:is(:hover, :focus) { color: var(--majorelle-blue); }
@@ -786,7 +803,20 @@ section {
 
 .hero .social-link .span { display: none; }
 
-.hero .social-list { gap: 12px; }
+.hero .social-list {
+  gap: 12px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .hero .social-list {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap; /* Allows items to wrap in case of multiple items */
+  }
+}
+
 
 .hero .social-link {
   background-color: var(--white);
@@ -889,6 +919,12 @@ section {
   display: grid;
   gap: 60px;
 }
+
+.featurex-listx {
+  display: grid;
+  gap: 0px;
+}
+
 
 .feature-card .card-icon {
   background-color: hsla(var(--color), 0.15);
@@ -1090,6 +1126,7 @@ section {
   display: inline-block;
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d; /* Allows the text to counter-rotate in 3D space */
+  color: white;
 }
 
 .number-display {
@@ -1128,7 +1165,6 @@ section {
   line-height: 1.2;
   margin-block-end: 20px;
   cursor: pointer;
-
   
 }
 
@@ -1144,7 +1180,11 @@ section {
   align-items: center;
   gap: 30px;
   margin-block-end: 20px;
+  justify-content: center; /* This will center the .tag horizontally */
+
 }
+
+
 
 .blog-card .tag {
   color: #12a4a1;
@@ -1177,6 +1217,7 @@ section {
   font-size: var(--fs-4);
   letter-spacing: -1px;
   transition: var(--transition-1);
+
 }
 
 .blog-card .card-title:is(:hover, :focus) { color: #118482; }
@@ -1184,16 +1225,18 @@ section {
 
 
 
-
+.custom-back-button ion-icon {
+  margin-right: 5px;
+  font-size: 20px;
+  color: #ffffff; /* Set the icon color to white */
+}
 
 
 .custom-back-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #30547d; /* Adjust the color to match your site's theme */
-  color: #fff;
-  text-decoration: none;
+  background-image:linear-gradient(to right top, #3e47ca, #3b42c8, #383dc7, #3638c5, #3333c3, #3331c2, #332ec1, #332cc0, #352cbf, #382bbe, #3a2bbd, #3c2bbc);  
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -1224,6 +1267,9 @@ section {
 }
 
 
+.return-text {
+  color: white;
+}
 
 
 
@@ -1254,6 +1300,24 @@ section {
 }
 
 
+
+
+
+
+
+  @media screen and (max-width: 1200px) {
+    .feature-card {
+      display: flex;
+      align-items: center;
+    }
+
+    .new-social-link {
+      margin-left: 10px; /* Add space between the icon and text */
+      margin-top: 0; /* Override any existing top margin */
+      position: relative;
+      top: -16px; /* Adjust this value to move the text slightly upwards */
+    }
+  }
 
 
 
@@ -1534,6 +1598,8 @@ section {
   .feature-banner { max-width: max-content; }
 
   .feature-list { gap: 30px; }
+
+  .featurex-listx { gap: 0px; }
 
   .feature-card {
     display: flex;
@@ -1872,6 +1938,7 @@ section {
     gap: 10px;
     flex-wrap: nowrap;
     margin-block-end: 10px;
+
   }
 
   .blog-card:not(.large) .publish-date {
@@ -1882,6 +1949,14 @@ section {
 
   .blog-card .card-title { --fs-4: 1.8rem; }
 
+
+
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 
   /**
