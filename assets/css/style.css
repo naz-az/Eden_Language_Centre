@@ -957,6 +957,30 @@ section {
 
 
 
+.feature-card .cardw-iconw {
+  background-color: hsla(var(--color), 0.15);
+  font-size: 24px;
+  max-width: max-content;
+  padding: 18px;
+  border-radius: 50%;
+  margin-block-end: 20px;
+  transition: var(--transition-2);
+}
+
+.feature-card .cardw-iconw ion-icon {
+  color: hsl(var(--color));
+  transition: var(--transition-1);
+}
+
+
+.feature-card:is(:hover, :focus) .cardw-iconw {
+  box-shadow: inset 0 0 0 30px hsla(var(--color), 0.9);
+}
+
+.feature-card:is(:hover, :focus) .cardw-iconw ion-icon { color: var(--white); }
+
+
+
 
 
 .features-cards .cards-icons {
@@ -986,6 +1010,8 @@ section {
 }
 
 .features-cards:is(:hover, :focus) .cards-icons ion-icon { color: var(--white); }
+
+
 
 
 
@@ -1321,6 +1347,65 @@ section {
 
 
 
+
+
+
+  @media only screen and (max-width: 768px) {
+    .services .section-titles {
+        margin-block: 60px 0px; ;
+    }
+}
+
+  
+
+
+
+@media only screen and (max-width: 768px) {
+  /* Centering block-level elements */
+  .features-cards .cards-icons {
+    background-color: hsla(var(--color), 0.15);
+    font-size: 24px;
+    max-width: max-content;
+    padding: 18px;
+    border-radius: 50%;
+    margin-block-end: 20px;
+    transition: var(--transition-2);
+    margin-left: auto; /* Centering horizontally */
+    margin-right: auto; /* Centering horizontally */
+  }
+
+  /* If .cards-icons are inline or inline-block, ensure the parent is styled as follows: */
+  /* .features-cards {
+    text-align: center;
+  } */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  h3.cardt-titlet {
+    text-align: center;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .feature-card .cardw-iconw {
+    background-color: hsla(var(--color), 0.15);
+    font-size: 18px;
+    max-width: max-content;
+    padding: 18px;
+    border-radius: 50%;
+    margin-block-end: 20px;
+    margin-right: 20px;
+    transition: var(--transition-2);
+  }
+  
+}
+  
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
