@@ -945,8 +945,24 @@ section {
   color: var(--cool-gray);
   font-size: var(--fs-7);
   text-align: justify;
+  word-spacing: -1px; /* Reduce space between words */
+  letter-spacing: -0.5px; /* Reduce space between letters */  
   /* margin-block-start: 10px; */
 }
+
+
+@media (max-width: 600px) {
+
+  .feature-card .card-text {
+    color: var(--cool-gray);
+    font-size: var(--fs-7);
+    text-align: justify;
+    word-spacing: -1px; /* Reduce space between words */
+    letter-spacing: -0.5px; /* Reduce space between letters */  }
+
+  
+}
+
 
 .feature-card:is(:hover, :focus) .card-icon {
   box-shadow: inset 0 0 0 30px hsla(var(--color), 0.9);
