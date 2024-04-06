@@ -662,7 +662,45 @@ section {
   font-size: 3.6rem;
   font-weight: var(--fw-700);
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
+
+.logo img {
+  margin-right: 20px;
+}
+
+
+@media (max-width: 600px) {
+
+  .logo {
+    color: var(--raisin-black-1);
+    font-size: 3.6rem;
+    font-weight: var(--fw-700);
+    margin-left:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+
+  }
+
+  .logo .logo-text {
+    font-size: 22px; /* Adjust the font size as needed */
+  }
+
+
+}
+
+
 
 .nav-open-btn {
   background-color: var(--white);
@@ -905,8 +943,6 @@ section {
 }
 
 .service .link-card:is(:hover, :focus) ion-icon { color: hsl(var(--color)); }
-
-
 
 
 
@@ -1954,13 +1990,13 @@ section {
    */
 
   .hero {
-    background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%);
+    /* background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%); */
     overflow: hidden;
   }
 
   .hero .container {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 0px;
   }
 
   .hero .wrapper { flex-wrap: nowrap; }

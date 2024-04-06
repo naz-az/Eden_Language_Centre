@@ -33,7 +33,7 @@
     <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link rel="preload" as="image" href="./assets/images/eden-logo.jpg" />
   </head>
 
   <body id="top">
@@ -43,11 +43,13 @@
 
     <header class="header" data-header>
       <div class="container">
-        <a href="index.html" class="logo">Eden Language Centre</a>
+<a href="index.html" class="logo">
+  <img src="./assets/images/edenl (1).jpg" alt="Eden Language Centre Logo">
+  <span class="logo-text">Eden Language Centre</span>
+</a>
 
         <nav class="navbar" data-navbar>
           <div class="wrapper">
-        <a href="index.html" class="logo">Eden Language Centre</a>
 
             <button
               class="nav-close-btn"
@@ -126,15 +128,22 @@
 
 </div>
 
-              <!-- Updated anchor tag with mailto: -->
-<button class="hero-btn" style="border: 2px solid #5a58e945; border-radius: 10px; padding-inline: 20px; height: 65px;">
-  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-  <span class="span">E-Mail Now</span>
-</button>
 
 
 
-
+        <!-- Rotatable email button with copy functionality -->
+      <div id="emailButtonContainer" style="border: 2px solid #0400ff66; border-radius: 10px; padding-inline: 40px; height: 70px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: transform 0.3s;">
+          <div id="emailNowContent" style="display: flex; align-items: center;">
+    <p id="emailNowText" style="margin: 0; color: blue;">Email Now</p>
+            <ion-icon id="emailIcon" name="mail-outline" aria-hidden="true" style="margin-left: 10px; color: blue; font-size: 20px; font-weight: bold;"></ion-icon>
+          </div>
+          <div id="emailContent" style="display: none; flex-direction: row; align-items: center; transform: rotateY(180deg);">
+            <p id="emailAddress" style="margin: 0; padding-right: 10px;color: blue;">languagecentreeden@gmail.com</p>
+            <button id="copyEmailButton" aria-label="Copy Email" style="background: none; border: none; cursor: pointer;color: blue;">
+              <ion-icon name="copy-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+        </div>
 
 
               </div>
@@ -155,7 +164,7 @@
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/edenlanguagecentre/"
                     class="social-link"
                     style="--color: hsl(0, 100%, 50%)"
                     target="_blank"
@@ -183,7 +192,7 @@
 
             <figure class="hero-banner">
               <img
-                src="./assets/images/hero-banner.png"
+                src="./assets/images/eden-logo2.jpg"
                 width="794"
                 height="637"
                 alt="hero banner"
@@ -304,6 +313,28 @@
               </li>
 
   
+              <li>
+                <div class="service-card" style="--color: 39, 100%, 50%">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/eartt.png"
+                      width="120"
+                      height="120"
+                      loading="lazy"
+                      alt="service icon"
+                    />
+                  </div>
+
+<div style="text-align: center;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Contact Us for More Languages</a>
+                  </h3>
+                                                      </div>
+
+                </div>
+              </li>
+
 
 
             </ul>
@@ -1043,37 +1074,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-<script>
 
+<script>
 document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('rotateButton');
+  const buttonText = button.querySelector('.button-text');
   const emailButton = document.querySelector('.hero-btn');
   const emailSpan = emailButton.querySelector('.span');
-  const emailIcon = emailButton.querySelector('ion-icon');
-  let isEmailRotated = false;
+  const emailIcon = emailButton.querySelector('ion-icon[name="mail-outline"]');
+  const copyIcon = document.getElementById('copyIcon');
+  let isRotated = false;
 
-  emailButton.addEventListener('click', () => {
-    if (!isEmailRotated) {
-      emailButton.style.transform = 'rotateY(180deg)';
-      emailSpan.style.transform = 'rotateY(-180deg)';
+  // Rotating button functionality
+  button.addEventListener('click', () => {
+    if (!isRotated) {
+      button.style.transform = 'rotateY(180deg)';
+      buttonText.style.transform = 'rotateY(-180deg)';
       setTimeout(() => {
-        emailSpan.textContent = 'languagecentreeden@gmail.com';
-        emailIcon.style.display = 'none'; // Hide the icon
-      }, 50);
-      isEmailRotated = true;
+        buttonText.textContent = '+60174490672';
+        buttonText.style.color = 'black';
+        button.classList.add('number-display');
+      }, 300);
+      isRotated = true;
     } else {
-      emailButton.style.transform = 'rotateY(360deg)';
-      emailSpan.style.transform = 'rotateY(0deg)';
+      button.style.transform = 'rotateY(360deg)';
+      buttonText.style.transform = 'rotateY(0deg)';
       setTimeout(() => {
-        emailSpan.textContent = 'E-Mail Now';
-        emailIcon.style.display = 'inline'; // Show the icon again
-      }, 50);
-      isEmailRotated = false;
+        buttonText.textContent = 'Call Now';
+        buttonText.style.color = 'white';
+        button.classList.remove('number-display');
+      }, 300);
+      isRotated = false;
     }
   });
-});
+
 
 
 </script>
+
+
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const emailButtonContainer = document.getElementById('emailButtonContainer');
+  const emailNowContent = document.getElementById('emailNowContent');
+  const emailContent = document.getElementById('emailContent');
+  const copyEmailButton = document.getElementById('copyEmailButton');
+  const emailAddress = document.getElementById('emailAddress').textContent;
+
+  emailButtonContainer.addEventListener('click', () => {
+    if (emailNowContent.style.display !== 'none') {
+      emailButtonContainer.style.transform = 'rotateY(180deg)';
+      emailNowContent.style.display = 'none';
+      emailContent.style.display = 'flex';
+    } else {
+      emailButtonContainer.style.transform = 'rotateY(0deg)';
+      emailNowContent.style.display = 'flex';
+      emailContent.style.display = 'none';
+    }
+  });
+
+  copyEmailButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    navigator.clipboard.writeText(emailAddress).then(() => {
+      alert('Copied the e-mail: ' + emailAddress);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  });
+});
+
+  </script>
 
 
     <script>
