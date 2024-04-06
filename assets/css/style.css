@@ -407,6 +407,9 @@ body {
 
 
 
+
+
+
 *,
 *::before,
 *::after {
@@ -570,6 +573,7 @@ section {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
+  text-align: justify;
 
 }
 
@@ -577,11 +581,40 @@ section {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
+  text-align: justify;
+}
 
+
+/* Class for desktop sizes */
+.custom-margin {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .custom-margin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 
 
+
+/* Add this media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .cards {
+    width: 100%; /* Adjust this value based on your design requirements */
+  }
+
+  .cards-content {
+    padding: 10px; /* Adjust padding if necessary */
+  }
+}
 
 
 /*-----------------------------------*\
@@ -616,8 +649,46 @@ section {
   color: var(--raisin-black-1);
   font-size: 3.6rem;
   font-weight: var(--fw-700);
-  margin-left: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
+
+.logo img {
+  margin-right: 20px;
+}
+
+
+@media (max-width: 600px) {
+
+  .logo {
+    color: var(--raisin-black-1);
+    font-size: 3.6rem;
+    font-weight: var(--fw-700);
+    margin-left:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+
+  }
+
+  .logo .logo-text {
+    font-size: 22px; /* Adjust the font size as needed */
+  }
+
+
+}
+
+
 
 .nav-open-btn {
   background-color: var(--white);
@@ -728,10 +799,23 @@ section {
   margin-block-end: 30px;
 }
 
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .hero-content .wrapper {
+      display: flex;
+      justify-content: center; /* Centers the items horizontally */
+      align-items: center; /* Centers the items vertically */
+      flex-direction: column; /* Stacks the flex items vertically */
+  }
+}
+
+
 .hero-btn {
   gap: 15px;
   color: var(--raisin-black-1);
   transition: var(--transition-1);
+  cursor: pointer;
 }
 
 .hero-btn:is(:hover, :focus) { color: var(--majorelle-blue); }
@@ -745,7 +829,20 @@ section {
 
 .hero .social-link .span { display: none; }
 
-.hero .social-list { gap: 12px; }
+.hero .social-list {
+  gap: 12px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .hero .social-list {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap; /* Allows items to wrap in case of multiple items */
+  }
+}
+
 
 .hero .social-link {
   background-color: var(--white);
@@ -837,8 +934,6 @@ section {
 
 
 
-
-
 /*-----------------------------------*\
   #FEATURE
 \*-----------------------------------*/
@@ -848,6 +943,12 @@ section {
   display: grid;
   gap: 60px;
 }
+
+.featurex-listx {
+  display: grid;
+  gap: 0px;
+}
+
 
 .feature-card .card-icon {
   background-color: hsla(var(--color), 0.15);
@@ -868,8 +969,24 @@ section {
   color: var(--cool-gray);
   font-size: var(--fs-7);
   text-align: justify;
+  word-spacing: -1px; /* Reduce space between words */
+  letter-spacing: -0.5px; /* Reduce space between letters */  
   /* margin-block-start: 10px; */
 }
+
+
+@media (max-width: 600px) {
+
+  .feature-card .card-text {
+    color: var(--cool-gray);
+    font-size: var(--fs-7);
+    text-align: justify;
+    word-spacing: -1px; /* Reduce space between words */
+    letter-spacing: -0.5px; /* Reduce space between letters */  }
+
+  
+}
+
 
 .feature-card:is(:hover, :focus) .card-icon {
   box-shadow: inset 0 0 0 30px hsla(var(--color), 0.9);
@@ -877,6 +994,30 @@ section {
 
 .feature-card:is(:hover, :focus) .card-icon ion-icon { color: var(--white); }
 
+
+
+
+.feature-card .cardw-iconw {
+  background-color: hsla(var(--color), 0.15);
+  font-size: 24px;
+  max-width: max-content;
+  padding: 18px;
+  border-radius: 50%;
+  margin-block-end: 20px;
+  transition: var(--transition-2);
+}
+
+.feature-card .cardw-iconw ion-icon {
+  color: hsl(var(--color));
+  transition: var(--transition-1);
+}
+
+
+.feature-card:is(:hover, :focus) .cardw-iconw {
+  box-shadow: inset 0 0 0 30px hsla(var(--color), 0.9);
+}
+
+.feature-card:is(:hover, :focus) .cardw-iconw ion-icon { color: var(--white); }
 
 
 
@@ -909,6 +1050,8 @@ section {
 }
 
 .features-cards:is(:hover, :focus) .cards-icons ion-icon { color: var(--white); }
+
+
 
 
 
@@ -1049,6 +1192,7 @@ section {
   display: inline-block;
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d; /* Allows the text to counter-rotate in 3D space */
+  color: white;
 }
 
 .number-display {
@@ -1087,7 +1231,6 @@ section {
   line-height: 1.2;
   margin-block-end: 20px;
   cursor: pointer;
-
   
 }
 
@@ -1103,7 +1246,11 @@ section {
   align-items: center;
   gap: 30px;
   margin-block-end: 20px;
+  justify-content: center; /* This will center the .tag horizontally */
+
 }
+
+
 
 .blog-card .tag {
   color: #12a4a1;
@@ -1136,6 +1283,7 @@ section {
   font-size: var(--fs-4);
   letter-spacing: -1px;
   transition: var(--transition-1);
+
 }
 
 .blog-card .card-title:is(:hover, :focus) { color: #118482; }
@@ -1143,22 +1291,24 @@ section {
 
 
 
-
+.custom-back-button ion-icon {
+  margin-right: 5px;
+  font-size: 20px;
+  color: #ffffff; /* Set the icon color to white */
+}
 
 
 .custom-back-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #677483; /* Adjust the color to match your site's theme */
-  color: #fff;
-  text-decoration: none;
+  background-image:linear-gradient(to right top, #3e47ca, #3b42c8, #383dc7, #3638c5, #3333c3, #3331c2, #332ec1, #332cc0, #352cbf, #382bbe, #3a2bbd, #3c2bbc);  
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 40px;
   margin-left: 50px;
 }
@@ -1173,9 +1323,129 @@ section {
 }
 
 
+/* Add this media query for mobile screens */
+@media screen and (max-width: 600px) {
+  .custom-back-button {
+    margin-left: 0; /* Remove margin-left on mobile screens */
+    margin-top: 50px;
+
+  }
+}
+
+
+.return-text {
+  color: white;
+}
 
 
 
+
+
+
+
+@media screen and (max-width: 600px) {
+  .mobile-margin-top {
+    margin-top: 30px; 
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .buttonhomepage {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+  @media screen and (max-width: 1200px) {
+    .feature-card {
+      display: flex;
+      align-items: center;
+    }
+
+    .new-social-link {
+      margin-left: 10px; /* Add space between the icon and text */
+      margin-top: 0; /* Override any existing top margin */
+      position: relative;
+      top: -16px; /* Adjust this value to move the text slightly upwards */
+    }
+  }
+
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+    .services .section-titles {
+        margin-block: 60px 0px; ;
+    }
+}
+
+  
+
+
+
+@media only screen and (max-width: 768px) {
+  /* Centering block-level elements */
+  .features-cards .cards-icons {
+    background-color: hsla(var(--color), 0.15);
+    font-size: 24px;
+    max-width: max-content;
+    padding: 18px;
+    border-radius: 50%;
+    margin-block-end: 20px;
+    transition: var(--transition-2);
+    margin-left: auto; /* Centering horizontally */
+    margin-right: auto; /* Centering horizontally */
+  }
+
+  /* If .cards-icons are inline or inline-block, ensure the parent is styled as follows: */
+  /* .features-cards {
+    text-align: center;
+  } */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  h3.cardt-titlet {
+    text-align: center;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .feature-card .cardw-iconw {
+    background-color: hsla(var(--color), 0.15);
+    font-size: 18px;
+    max-width: max-content;
+    padding: 18px;
+    border-radius: 50%;
+    margin-block-end: 20px;
+    margin-right: 20px;
+    transition: var(--transition-2);
+  }
+  
+}
+  
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1454,6 +1724,8 @@ section {
 
   .feature-list { gap: 30px; }
 
+  .featurex-listx { gap: 0px; }
+
   .feature-card {
     display: flex;
     justify-content: flex-start;
@@ -1689,8 +1961,15 @@ section {
 
 
 
+  .sectionz {
+    padding-block: 20px;
+    /* Include other properties if needed */
+  }
 
-
+  .sectiont {
+    padding-block: 20px;
+    /* Include other properties if needed */
+  }
 
 
 
@@ -1699,13 +1978,13 @@ section {
    */
 
   .hero {
-    background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%);
+    /* background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%); */
     overflow: hidden;
   }
 
   .hero .container {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 0px;
   }
 
   .hero .wrapper { flex-wrap: nowrap; }
@@ -1784,6 +2063,7 @@ section {
     gap: 10px;
     flex-wrap: nowrap;
     margin-block-end: 10px;
+
   }
 
   .blog-card:not(.large) .publish-date {
@@ -1794,6 +2074,14 @@ section {
 
   .blog-card .card-title { --fs-4: 1.8rem; }
 
+
+
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 
   /**

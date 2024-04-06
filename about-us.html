@@ -42,13 +42,15 @@
     - #HEADER
   -->
 
-    <header class="header" data-header>
+ <header class="header" data-header>
       <div class="container">
-        <a href="index.html" class="logo">Eden Language Centre</a>
+<a href="index.html" class="logo">
+  <img src="./assets/images/edenl (1).jpg" alt="Eden Language Centre Logo">
+  <span class="logo-text">Eden Language Centre</span>
+</a>
 
         <nav class="navbar" data-navbar>
           <div class="wrapper">
-            <a href="#" class="logo">Eden Language Centre</a>
 
             <button
               class="nav-close-btn"
@@ -61,7 +63,7 @@
 
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+<a href="index.html" class="navbar-link" data-nav-link style="font-weight: 900;">Home</a>
             </li>
 
             <li class="navbar-item">
@@ -76,7 +78,7 @@
 
             <li class="navbar-item">
               <a href="about-us.html" class="navbar-link" data-nav-link
-                style="font-weight: 900;">About Us</a
+                >About Us</a
               >
             </li>
           </ul>
@@ -86,9 +88,11 @@
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
         </button>
 
+
         <div class="overlay" data-nav-toggler data-overlay></div>
       </div>
     </header>
+
 
     <main>
       <article>
@@ -96,19 +100,28 @@
         - #HERO
       -->
 
-        <!-- 
+        <!-- x
         - #BLOG
       -->
 
-        <section class="section blog" id="blog" aria-label="blog">
-          <div class="container">
+        <section class="sectiont blog" id="blog" aria-label="blog">
+          <div style="margin-top: 150px; margin-bottom: 50px;" class="container">
+
+
+<div style="margin-bottom: 80px;">
+
+
             <h2 class="h2 section-title text-center">About Us</h2>
+
+
+</div>
+
 
             <!-- 
         - #FEATURE
       -->
 
-            <section class="section feature" id="feature" aria-label="feature">
+            <section class="sectiont feature" id="feature" aria-label="feature">
               <div class="container">
                 <figure class="feature-banner">
                   <img
@@ -129,7 +142,7 @@
                   <ul class="feature-list">
                     <li>
                       <div class="feature-card">
-                        <div class="card-icon" style="--color: 174, 77%, 50%">
+                        <div class="cardw-iconw" style="--color: 174, 77%, 50%">
                           <ion-icon
                             name="rocket-sharp"
                             aria-hidden="true"
@@ -152,7 +165,7 @@
                   <ul class="feature-list">
                     <li>
                       <div class="feature-card">
-                        <div class="card-icon" style="--color: 343, 98%, 60%">
+                        <div class="cardw-iconw" style="--color: 343, 98%, 60%">
                           <ion-icon
                             name="shield-checkmark-outline"
                             aria-hidden="true"
@@ -175,7 +188,8 @@
               </div>
             </section>
 
-            <div class="container">
+
+            <div style="margin-top: 80px;" class="container">
               <div class="feature-content">
                 <h2 class="h2 section-title">Contact Us</h2>
 
@@ -187,18 +201,23 @@
                           <strong>Email: </strong>
                           languagecentreeden@gmail.com<br />
                           <strong>Phone: </strong> +6017-4490672<br />
-                          <strong>Address: </strong> 123, Jalan Bukit Bintang,
-                          55100 Kuala Lumpur, Malaysia<br />
+                          <strong>Address: </strong> No.7, Lorong 8/2D,
+46050 Petaling Jaya, 
+Selangor, Malaysia<br />
                         </p>
                       </div>
                     </div>
                   </li>
                 </ul>
-                          <div id="map" style="height: 400px; width: 100%; margin-bottom: 50px;"></div>
+                          <div id="map" style="height: 400px; width: 100%; margin-bottom: 100px;"></div>
 
+<div style="margin-bottom: 30px;">
                 <h2 class="h2 section-title">Connect With Us</h2>
+</div>
 
-<ul class="feature-list">
+
+
+<ul class="featurex-listx">
   <li>
     <div class="feature-card">
       <div class="card-icon" style="--color: 223, 98%, 57%">
@@ -215,11 +234,11 @@
   <li>
     <div class="feature-card">
       <div class="card-icon" style="--color: 326, 57%, 48%">
-        <a href="https://www.instagram.com" target="_blank">
+        <a href="https://www.instagram.com/edenlanguagecentre/" target="_blank">
           <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
         </a>
       </div>
-      <a href="https://www.instagram.com" class="new-social-link" target="_blank" style="--color: hsl(0, 100%, 50%); --hover-color: red; margin-top: 15px;">
+      <a href="https://www.instagram.com/edenlanguagecentre/" class="new-social-link" target="_blank" style="--color: hsl(0, 100%, 50%); --hover-color: red; margin-top: 15px;">
         <span class="new-span">Instagram</span>
       </a>
     </div>
@@ -313,7 +332,7 @@
 
     <script>
       // Initialize the map
-      var map = L.map("map").setView([3.1478, 101.7081], 13); // Coordinates for New York City
+  var map = L.map("map").setView([3.098264, 101.637882], 13);
 
       // Add the tile layer using the provided URL
       L.tileLayer(
@@ -325,10 +344,11 @@
         }
       ).addTo(map);
 
-      var marker = L.marker([3.1478, 101.7081]).addTo(map);
-      marker
-        .bindPopup("<b>Language Tutor Malaysia</b><br>123, Jalan Bukit Bintang")
-        .openPopup();
+  var marker = L.marker([3.098264, 101.637882]).addTo(map);
+  marker
+    .bindPopup("<b>Eden Language Centre</b><br>No.7, Lorong 8/2D,<br>46050 Petaling Jaya,<br>Selangor, Malaysia")
+    .openPopup();
+
 
       // Add click event listener to the map
       map.on("click", function (e) {

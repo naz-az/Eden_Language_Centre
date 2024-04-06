@@ -33,7 +33,7 @@
     <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link rel="preload" as="image" href="./assets/images/eden-logo.jpg" />
   </head>
 
   <body id="top">
@@ -43,11 +43,13 @@
 
     <header class="header" data-header>
       <div class="container">
-        <a href="index.html" class="logo">Eden Language Centre</a>
+<a href="index.html" class="logo">
+  <img src="./assets/images/edenl (1).jpg" alt="Eden Language Centre Logo">
+  <span class="logo-text">Eden Language Centre</span>
+</a>
 
         <nav class="navbar" data-navbar>
           <div class="wrapper">
-        <a href="index.html" class="logo">Eden Language Centre</a>
 
             <button
               class="nav-close-btn"
@@ -99,10 +101,15 @@
         <section class="section hero" id="home" aria-label="hero">
           <div class="container">
             <div class="hero-content">
-              <h1 class="h1 hero-title">
-                Unlock New
-                <span style="color: #677483">Languages.</span>
-              </h1>
+
+
+<div class="mobile-margin-top">
+  <h1 class="h1 hero-title">
+    Unlock New
+    <span style="color: #677483">Languages.</span>
+  </h1>
+</div>
+
 
               <p class="hero-text">
                 Welcome to Eden Language Centre, where kids aged 10-16 embark on
@@ -117,16 +124,27 @@
 
 <div class="call-now-container">
 
-
 <button id="rotateButton" class="btn btn-primary"><span class="button-text">Call Now</span></button>
 
 </div>
 
-              <!-- Updated anchor tag with mailto: -->
-              <a class="hero-btn" aria-label="pixology promo">
-                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                <span class="span">E-Mail Now</span>
-              </a>
+
+
+
+        <!-- Rotatable email button with copy functionality -->
+      <div id="emailButtonContainer" style="border: 2px solid #0400ff66; border-radius: 10px; padding-inline: 40px; height: 70px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: transform 0.3s;">
+          <div id="emailNowContent" style="display: flex; align-items: center;">
+    <p id="emailNowText" style="margin: 0; color: blue;">Email Now</p>
+            <ion-icon id="emailIcon" name="mail-outline" aria-hidden="true" style="margin-left: 10px; color: blue; font-size: 20px; font-weight: bold;"></ion-icon>
+          </div>
+          <div id="emailContent" style="display: none; flex-direction: row; align-items: center; transform: rotateY(180deg);">
+            <p id="emailAddress" style="margin: 0; padding-right: 10px;color: blue;">languagecentreeden@gmail.com</p>
+            <button id="copyEmailButton" aria-label="Copy Email" style="background: none; border: none; cursor: pointer;color: blue;">
+              <ion-icon name="copy-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+        </div>
+
 
               </div>
 
@@ -146,7 +164,7 @@
 
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/edenlanguagecentre/"
                     class="social-link"
                     style="--color: hsl(0, 100%, 50%)"
                     target="_blank"
@@ -174,7 +192,7 @@
 
             <figure class="hero-banner">
               <img
-                src="./assets/images/hero-banner.png"
+                src="./assets/images/eden-logo2.jpg"
                 width="794"
                 height="637"
                 alt="hero banner"
@@ -187,18 +205,18 @@
         <!-- 
         - #SERVICE
       -->
-      <!-- 
-        - #SERVICE
-      -->
 
-        <section class="section service" id="service" aria-label="service">
-          <div class="container">
+
+        <section class="sectiont service" id="service" aria-label="service">
+          <div style="margin-top: 80px; margin-bottom: 80px;" class="container">
+
+          <div style="margin-bottom: 100px;">
 
             <h2 class="h2 section-title text-center">
               Discover Our Variety of
               <span style="color: #677483">Foreign Language Courses </span>
             </h2>
-
+</div>
             <ul class="grid-list">
               <li >
                 <div class="service-card" style="--color: 35, 100%, 29%">
@@ -217,9 +235,12 @@
 </div>
 
 
-                  <h3 class="h3">
-                    <a href="german-roadmap.html" class="card-title">German</a>
-                  </h3>
+<div style="text-align: center;">
+  <h3 class="h3">
+    <a href="german-roadmap.html" class="card-title">German</a>
+  </h3>
+</div>
+
                 </div>
               </li>
               <li>
@@ -236,9 +257,14 @@
   </div>
 </div>
 
+<div style="text-align: center;">
+
                   <h3 class="h3">
                     <a href="#" class="card-title">French</a>
                   </h3>
+                  </div>
+
+
                 </div>
               </li>
 
@@ -254,9 +280,13 @@
                     />
                   </div>
 
+<div style="text-align: center;">
                   <h3 class="h3">
                     <a href="#" class="card-title">Spanish</a>
                   </h3>
+                                    </div>
+
+
                 </div>
               </li>
 
@@ -272,13 +302,39 @@
                     />
                   </div>
 
+<div style="text-align: center;">
+
                   <h3 class="h3">
                     <a href="#" class="card-title">Korean</a>
                   </h3>
+                                                      </div>
+
                 </div>
               </li>
 
   
+              <li>
+                <div class="service-card" style="--color: 39, 100%, 50%">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/eartt.png"
+                      width="120"
+                      height="120"
+                      loading="lazy"
+                      alt="service icon"
+                    />
+                  </div>
+
+<div style="text-align: center;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Contact Us for More Languages</a>
+                  </h3>
+                                                      </div>
+
+                </div>
+              </li>
+
 
 
             </ul>
@@ -289,96 +345,12 @@
 
 
 
-        <section>
-          <div class="containeres">
-            <div class="accordion">
-              <div class="accordion-item" id="question1">
-                <a class="accordion-link" href="#question1">
-                  <div class="flex">
-                    <h3>WHY SHOULD KIDS LEARN A NEW LANGUAGE?</h3>
-                    <ul>
-                      <li>#Figma</li>
-                      <li>#Sketch</li>
-                      <li>#Adobe</li>
-                      <li>#Invision</li>
-                      <li>#Protopie</li>
-                    </ul>
-                  </div>
-                  <i class="icon ion-md-arrow-forward" style="color: black"></i>
-                  <i class="icon ion-md-arrow-down" style="color: black"></i>
-                </a>
-                <div class="answer">
-                  <p>
-                    Besides the usual reasons adults learn a new language
-                    (career opportunities or romance) there are plenty of other
-                    benefits for kids to learn a new language. Improved memory:
-                    Learning a foreign language involves memorizing vocabulary
-                    and grammar, which enhances overall memory function.
-                    According to a study published in the journal
-                    "Neuropsychology," bilingualism has been linked to better
-                    memory performance (Bialystok et al., 2004). Problem-solving
-                    skills: Language learning stimulates critical thinking and
-                    problem-solving abilities. Research published in the journal
-                    "Psychological Science" suggests that bilingual individuals
-                    excel in tasks that require cognitive control and
-                    problem-solving (Green & Abutalebi, 2013). Increased
-                    creativity: Language learners often find creative ways to
-                    express themselves. Studies, such as one published in
-                    "Frontiers in Psychology," have shown that bilingualism is
-                    associated with greater cognitive flexibility and divergent
-                    thinking, key components of creativity (Kharkhurin, 2012).
-                    Learn to overcome obstacles Discipline: Let's face it,
-                  </p>
-                </div>
-                <hr />
-              </div>
-              <div class="accordion-item" id="question2">
-                <a class="accordion-link" href="#question2">
-                  <div class="flex">
-                    <h3>WHY START EARLY?</h3>
-                    <ul>
-                      <li>#Figma</li>
-                      <li>#Sketch</li>
-                      <li>#Adobe</li>
-                      <li>#Invision</li>
-                      <li>#Protopie</li>
-                    </ul>
-                  </div>
-                  <i class="icon ion-md-arrow-forward" style="color: black"></i>
-                  <i class="icon ion-md-arrow-down" style="color: black"></i>
-                </a>
-                <div class="answer">
-                  <p>
-                    Kids get the opportunity to explore, do you (parents) still
-                    remember the foreign language you learnt years ago at school
-                    or at university. Chances are you won't remember much of it.
-                    Starting early gives children to explore their interests
-                    Children are just better at learning stuff Longer time to
-                    learn a language: The usual pathway to study in a university
-                    overseas will be to study a language intensively for 1-2
-                    years after SPM. Starting early gives gives them the
-                    opportunity to learn at a slower pace and enjoy the process
-                    more than just cramming things in your head to pass that
-                    next exam Save costs: Pre university foreign language
-                    courses can be quite heavy for students to bear in a short
-                    space of time. We help reduce these costs greatly and help
-                    parents space out the costs, so it will not feel as much a
-                    burden
-                  </p>
-                </div>
-                <hr />
-              </div>
-
-
-            </div>
-          </div>
-        </section>
 
         <!-- 
         - #FEATURE
       -->
 
-        <section class="section features" id="feature" aria-label="feature">
+        <section class="sectionz features" id="feature" aria-label="feature">
           <div class="containers">
 
             <div class="feature-content">
@@ -386,9 +358,9 @@
 
 
 
-<div style="margin-bottom: 50px; text-align: center;">
+<div style="margin-top: 80px; margin-bottom: 70px; text-align: center;">
   <h2 class="h2 section-title">
-      Why Should Kids Learn A New Language?<span style="color: #677483; font-size: 26px; font-style: italic;">Besides the usual reasons adults learn a new language (career opportunities or romance), there are plenty of other benefits for kids to learn a new language.         </span>
+      Why Should Kids Learn A New Language?
   </h2>
 </div>
 
@@ -403,7 +375,7 @@
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Improved Memory</h3>
+                      <h3 class="h3 cardt-titlet">Improved Memory</h3>
 
                       <p style="text-align: justify;" class="card-text">
 Learning a foreign language involves memorizing vocabulary and grammar, which enhances overall memory function. According to a study published in the journal "Neuropsychology," bilingualism has been linked to better memory performance (Bialystok et al., 2004).                      </p>
@@ -422,7 +394,7 @@ Learning a foreign language involves memorizing vocabulary and grammar, which en
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Problem-Solving Skills</h3>
+                      <h3 class="h3 cardt-titlet">Problem-Solving Skills</h3>
 
                       <p  style="text-align: justify;" class="card-text">
 Language learning stimulates critical thinking and problem-solving abilities. Research published in the journal "Psychological Science" suggests that bilingual individuals excel in tasks that require cognitive control and problem-solving (Green & Abutalebi, 2013).                      </p>
@@ -440,7 +412,7 @@ Language learning stimulates critical thinking and problem-solving abilities. Re
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Increased Creativity</h3>
+                      <h3 class="h3 cardt-titlet">Increased Creativity</h3>
 
                       <p style="text-align: justify;"  class="card-text">
 Language learners often find creative ways to express themselves. Studies, such as one published in "Frontiers in Psychology," have shown that bilingualism is associated with greater cognitive flexibility and divergent thinking, key components of creativity (Kharkhurin, 2012).                      </p>
@@ -458,7 +430,7 @@ Language learners often find creative ways to express themselves. Studies, such 
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Learn To Overcome Obstacles</h3>
+                      <h3 class="h3 cardt-titlet">Learn To Overcome Obstacles</h3>
 
                       <p style="text-align: justify;" class="card-text">
         Learning a new language presents a unique set of challenges, from understanding complex grammar rules to acquiring a new vocabulary. As children navigate these challenges, they develop resilience and learn to approach problems from various angles, skills that are invaluable in overcoming obstacles in other areas of life.
@@ -476,7 +448,7 @@ Language learners often find creative ways to express themselves. Studies, such 
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Discipline</h3>
+                      <h3 class="h3 cardt-titlet">Discipline</h3>
 
                       <p style="text-align: justify;" class="card-text">
         Consistency is key in language learning, requiring a disciplined approach to study and practice. Children who engage in regular language learning activities develop a sense of discipline that can translate into improved focus and dedication in their academic pursuits and daily routines.
@@ -489,7 +461,7 @@ Language learners often find creative ways to express themselves. Studies, such 
 
 
 
-<div style="margin-top: 50px; margin-bottom: 50px; text-align: center;">
+<div style="margin-top: 100px; margin-bottom: 60px; text-align: center;">
   <h2 class="h2 section-title">
     Why start early?
   </h2>
@@ -507,7 +479,7 @@ Language learners often find creative ways to express themselves. Studies, such 
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Kids get the opportunity to explore</h3>
+                      <h3 class="h3 cardt-titlet">Kids get the opportunity to explore</h3>
 
                       <p style="text-align: justify;" class="card-text">
 Do you (parents) still remember the foreign language you learnt years ago at school or at university. Chances are you won't remember much of it. Starting early gives children to explore their interests.                    </div>
@@ -525,7 +497,7 @@ Do you (parents) still remember the foreign language you learnt years ago at sch
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Children are just better at learning stuff</h3>
+                      <h3 class="h3 cardt-titlet">Children are just better at learning stuff</h3>
 
                       <p style="text-align: justify;" class="card-text">
           Children's brains are like sponges, absorbing new information much more rapidly than adults. This natural ability to learn, combined with their innate curiosity and willingness to experiment with new sounds and words, makes them exceptional language learners at an early age.
@@ -543,7 +515,7 @@ Do you (parents) still remember the foreign language you learnt years ago at sch
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Longer time to learn a language</h3>
+                      <h3 class="h3 cardt-titlet">Longer time to learn a language</h3>
 
                       <p style="text-align: justify;" class="card-text">
 The usual pathway to study in a university overseas will be to study a language intensively for 1-2 years after SPM. Starting early gives gives them the opportunity to learn at a slower pace and enjoy the process more than just cramming things in your head to pass that next exam.                    </div>
@@ -560,7 +532,7 @@ The usual pathway to study in a university overseas will be to study a language 
                     </div>
 
                     <div>
-                      <h3 class="h3 card-title">Save costs</h3>
+                      <h3 class="h3 cardt-titlet">Save costs</h3>
 
                       <p style="text-align: justify;" class="card-text">
 Pre university foreign language courses can be quite heavy for students to bear in a short space of time. We help reduce these costs greatly and help parents space out the costs, so it will not feel as much a burden.                    </div>
@@ -610,14 +582,14 @@ Pre university foreign language courses can be quite heavy for students to bear 
               <p class="section-subtitle has-before">Why Learn With Us?</p>
 
               <h2 class="h2 section-title">
-Learn with the Best<span style="color: #677483; font-size: 30px;">Proven Success and Structured Excellence         </span>
+Learn with the Best<span style="color: #677483; font-size: 30px;">Proven Success and Structured Excellence.         </span>
 
               </h2>
 
               <ul class="feature-list">
                 <li>
                   <div class="feature-card">
-                    <div class="card-icon" style="--color: 264, 36%, 50%">
+                    <div class="cardw-iconw" style="--color: 264, 36%, 50%">
                       <ion-icon
                         name="rocket-sharp"
                         aria-hidden="true"
@@ -637,7 +609,7 @@ Our tutors are highly experienced language professionals, passionate about shari
 
                 <li>
                   <div class="feature-card">
-                    <div class="card-icon" style="--color: 343, 98%, 60%">
+                    <div class="cardw-iconw" style="--color: 343, 98%, 60%">
                       <ion-icon
                         name= "git-merge-outline"
                         aria-hidden="true"
@@ -656,7 +628,7 @@ Our courses align with accredited syllabi, ensuring you gain internationally rec
 
                                 <li>
                   <div class="feature-card">
-                    <div class="card-icon" style="--color: 144, 37%, 60%">
+                    <div class="cardw-iconw" style="--color: 144, 37%, 60%">
                       <ion-icon
                         name="sparkles-sharp"
                         aria-hidden="true"
@@ -687,8 +659,8 @@ Students consistently rave about our platform and discover how we've helped them
       -->
 
    
-              <section class="section project" id="project" aria-label="project">
-          <div class="container">
+              <section class="sectiont project" id="project" aria-label="project">
+          <div style="margin-top: 80px; margin-bottom: 80px;" class="container">
             <p class="section-subtitle has-before text-center">Tutors</p>
 
             <h2 class="h2 section-title text-center">
@@ -1081,6 +1053,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonText.style.transform = 'rotateY(-180deg)';
       setTimeout(() => {
         buttonText.textContent = '+60174490672';
+        buttonText.style.color = 'black'; // Change text color to black
         button.classList.add('number-display'); // Add class to change background
       }, 300);
       isRotated = true;
@@ -1089,6 +1062,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonText.style.transform = 'rotateY(0deg)';
       setTimeout(() => {
         buttonText.textContent = 'Call Now';
+        buttonText.style.color = 'white'; // Change text color to white
         button.classList.remove('number-display'); // Remove class to revert background
       }, 300);
       isRotated = false;
@@ -1097,39 +1071,81 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 </script>
 
-<script>
 
+<script>
 document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('rotateButton');
+  const buttonText = button.querySelector('.button-text');
   const emailButton = document.querySelector('.hero-btn');
   const emailSpan = emailButton.querySelector('.span');
-  const emailIcon = emailButton.querySelector('ion-icon');
-  let isEmailRotated = false;
+  const emailIcon = emailButton.querySelector('ion-icon[name="mail-outline"]');
+  const copyIcon = document.getElementById('copyIcon');
+  let isRotated = false;
 
-  emailButton.addEventListener('click', () => {
-    if (!isEmailRotated) {
-      emailButton.style.transform = 'rotateY(180deg)';
-      emailSpan.style.transform = 'rotateY(-180deg)';
+  // Rotating button functionality
+  button.addEventListener('click', () => {
+    if (!isRotated) {
+      button.style.transform = 'rotateY(180deg)';
+      buttonText.style.transform = 'rotateY(-180deg)';
       setTimeout(() => {
-        emailSpan.textContent = 'languagecentreeden@gmail.com';
-        emailIcon.style.display = 'none'; // Hide the icon
-      }, 50);
-      isEmailRotated = true;
+        buttonText.textContent = '+60174490672';
+        buttonText.style.color = 'black';
+        button.classList.add('number-display');
+      }, 300);
+      isRotated = true;
     } else {
-      emailButton.style.transform = 'rotateY(360deg)';
-      emailSpan.style.transform = 'rotateY(0deg)';
+      button.style.transform = 'rotateY(360deg)';
+      buttonText.style.transform = 'rotateY(0deg)';
       setTimeout(() => {
-        emailSpan.textContent = 'E-Mail Now';
-        emailIcon.style.display = 'inline'; // Show the icon again
-      }, 50);
-      isEmailRotated = false;
+        buttonText.textContent = 'Call Now';
+        buttonText.style.color = 'white';
+        button.classList.remove('number-display');
+      }, 300);
+      isRotated = false;
     }
+  });
+
+
+
+</script>
+
+
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const emailButtonContainer = document.getElementById('emailButtonContainer');
+  const emailNowContent = document.getElementById('emailNowContent');
+  const emailContent = document.getElementById('emailContent');
+  const copyEmailButton = document.getElementById('copyEmailButton');
+  const emailAddress = document.getElementById('emailAddress').textContent;
+
+  emailButtonContainer.addEventListener('click', () => {
+    if (emailNowContent.style.display !== 'none') {
+      emailButtonContainer.style.transform = 'rotateY(180deg)';
+      emailNowContent.style.display = 'none';
+      emailContent.style.display = 'flex';
+    } else {
+      emailButtonContainer.style.transform = 'rotateY(0deg)';
+      emailNowContent.style.display = 'flex';
+      emailContent.style.display = 'none';
+    }
+  });
+
+  copyEmailButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    navigator.clipboard.writeText(emailAddress).then(() => {
+      alert('Copied the e-mail: ' + emailAddress);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
   });
 });
 
-
-</script>
+  </script>
 
 
     <script>
