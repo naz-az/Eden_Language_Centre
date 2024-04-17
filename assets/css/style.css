@@ -943,10 +943,10 @@ section {
   display: grid;
   gap: 60px;
 }
-
 .featurex-listx {
   display: grid;
-  gap: 0px;
+  gap: 0px; /* Adjust the gap between the items as needed */
+  grid-template-columns: repeat(3, 1fr); /* This will create three columns */
 }
 
 
