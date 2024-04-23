@@ -143,14 +143,14 @@
     
 
 <!-- Duplicated and modified Rotatable email button with copy functionality -->
-<div id="emailButtonContainer2" style="border: 2px solid blue; border-radius: 10px; padding-inline: 40px; height: 70px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: transform 0.3s;">
+<div id="emailButtonContainer2" style="border: 2px solid #00a5d8; border-radius: 10px; padding-inline: 40px; height: 70px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: transform 0.3s;">
   <div id="emailNowContent2" style="display: flex; align-items: center;">
     <p id="emailNowText2" style="margin: 0; color: blue;">Call Now</p>
     <ion-icon id="emailIcon2" name="call-outline" aria-hidden="true" style="margin-left: 10px; color: blue; font-size: 20px; font-weight: bold;"></ion-icon>
   </div>
   <div id="emailContent2" style="display: none; flex-direction: row; align-items: center; transform: rotateY(180deg);">
-    <p id="emailAddress2" style="margin: 0; padding-right: 10px; color: yellow;">+60174490672</p>
-    <button id="copyEmailButton2" aria-label="Copy Email" style="background: none; border: none; cursor: pointer; color: yellow;">
+    <p id="emailAddress2" style="margin: 0; padding-right: 10px; color: #0400ff;">+60174490672</p>
+    <button id="copyEmailButton2" aria-label="Copy Email" style="background: none; border: none; cursor: pointer; color: #00a5d8;">
       <ion-icon name="copy-outline" aria-hidden="true"></ion-icon>
     </button>
   </div>
@@ -965,7 +965,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonText.style.transform = 'rotateY(0deg)';
       setTimeout(() => {
         buttonText.textContent = 'Call Now';
-        buttonText.style.color = 'white'; // Change text color to white
+        buttonText.style.color = '#0400ff66'; // Change text color to white
         button.classList.remove('number-display'); // Remove class to revert background
       }, 300);
       isRotated = false;
@@ -1077,10 +1077,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyIcon2 = copyEmailButton2.querySelector('ion-icon'); // Get the copy icon inside the button
 
   let isRotated2 = false; // Track the rotation state
-  emailButtonContainer2.style.backgroundColor = 'blue'; // Initial background color
-  emailNowText2.style.color = 'white'; // Set initial text color to white
-  emailIcon2.style.color = 'white'; // Set initial icon color to white
-  emailAddress2.style.color = 'black'; // Set email address color to white
+  emailButtonContainer2.style.backgroundColor = 'white'; // Initial background color
+  emailNowText2.style.color = '#00a5d8'; // Set initial text color to white
+  emailIcon2.style.color = '#00a5d8'; // Set initial icon color to white
+  emailAddress2.style.color = '#00a5d8'; // Set email address color to white
   copyIcon2.style.color = 'black'; // Set the copy icon color to white
 
   // Function to show custom alert for the duplicated button
@@ -1095,13 +1095,13 @@ document.addEventListener('DOMContentLoaded', () => {
   emailButtonContainer2.addEventListener('click', () => {
     if (!isRotated2) {
       emailButtonContainer2.style.transform = 'rotateY(180deg)';
-      emailButtonContainer2.style.backgroundColor = 'yellow'; // Change to yellow on rotation
+      emailButtonContainer2.style.backgroundColor = 'white'; // Change to yellow on rotation
       emailNowContent2.style.display = 'none';
       emailContent2.style.display = 'flex';
       isRotated2 = true;
     } else {
       emailButtonContainer2.style.transform = 'rotateY(0deg)';
-      emailButtonContainer2.style.backgroundColor = 'blue'; // Change back to blue
+      emailButtonContainer2.style.backgroundColor = 'white'; // Change back to blue
       emailNowContent2.style.display = 'flex';
       emailContent2.style.display = 'none';
       isRotated2 = false;
