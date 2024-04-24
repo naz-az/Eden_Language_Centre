@@ -2274,6 +2274,10 @@ section {
     min-width: max-content;
   }
 
+  .home-svg {
+    width: 650px;
+    height: 650px;
+}
 
 
   /**
