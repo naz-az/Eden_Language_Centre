@@ -2280,6 +2280,16 @@ section {
 }
 
 
+/* Responsive styles for screens narrower than 768px (typical breakpoint for tablets and mobile devices) */
+@media (max-width: 768px) {
+  .home-svg {
+      width: 400px;  /* Adjusted for smaller screens */
+      height: 400px; /* Adjusted for smaller screens */
+  }
+}
+
+
+
   /**
    * SERVICE
    */
