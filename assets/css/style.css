@@ -666,6 +666,13 @@ section {
 
 }
 
+
+.logo-svg {
+  width: 73px;
+  height: 71px;
+}
+
+
 @media (max-width: 600px) {
 
   .logo {
