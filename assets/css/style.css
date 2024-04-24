@@ -660,6 +660,11 @@ section {
   margin-right: 20px;
 }
 
+.logo .logo-text {
+  color:black;
+;
+
+}
 
 @media (max-width: 600px) {
 
@@ -682,7 +687,10 @@ section {
   }
 
   .logo .logo-text {
-    font-size: 22px; /* Adjust the font size as needed */
+    font-size: 22px; 
+    color:black;
+;
+
   }
 
 
