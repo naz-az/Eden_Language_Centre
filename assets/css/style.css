@@ -313,7 +313,7 @@ body {
   height: 50%;
   transform: scaleX(0);
 
-  background-image: linear-gradient(to left bottom, #efce56, #efcc56, #efca56, #efc956, #efc756, #efc556, #efc356, #efc156, #efbe56, #efbc56, #efb956, #efb756);  z-index: -1;
+  background-image: linear-gradient(to left bottom, #421f1f, #411c1c, #401919, #3f1616, #3e1313, #3d1011, #3b0e0f, #3a0b0c, #39090a, #380708, #370606, #360404);  z-index: -1;
   transition: transform var(--transition-1);
 }
 
@@ -342,7 +342,8 @@ body {
 .btn-primary:is(:hover, :focus) { color: white }
 
 .btn-secondary {
-  background-color: var(--mustard);
+  /* background-color: var(--mustard); */
+  background-image: linear-gradient(to right top, #f5f1f1, #f3eded, #f2eaea, #f0e6e6, #eee3e3, #ece0e0, #e9dcdc, #e7d9d9, #e4d5d5, #e0d0d0, #ddcccc, #dac8c8);
   color: var(--raisin-black-1);
   gap: 15px;
 }
@@ -365,11 +366,24 @@ body {
   line-height: 1.2;
 }
 
+
+@media (max-width: 768px) {
+
+.section-subtitle {
+  color: var(--cool-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  line-height: 1.2;
+  margin-top: 30px;
+
+}
+}
+
 .section-subtitle::before {
   position: static;
   width: 12px;
   height: 12px;
-  background-color: var(--mustard);
+  background-color: #e95151;
   display: inline-block;
   border-radius: 50%;
   margin-inline-end: 10px;
@@ -404,6 +418,20 @@ body {
 
 
 
+
+.newsletter-content {
+
+}
+
+@media (max-width: 768px) {
+  .newsletter-content {
+    display: grid;
+    gap: 10px;
+    place-items: center; /* Center items both horizontally and vertically */
+    text-align: center; /* Center text alignment */
+    box-sizing: border-box;
+  }
+}
 
 
 
@@ -1158,6 +1186,17 @@ section {
 .newsletter .container {
   display: grid;
   gap: 50px;
+
+}
+
+
+@media (max-width: 768px) {
+  .newsletter .container {
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 0px;
+
+  }
 }
 
 .newsletter-banner { max-width: max-content; }
@@ -1170,7 +1209,7 @@ section {
 }
 
 .email-field {
-  background-color: var(--majorelle-blue);
+  background-color: #7a2424;
   color: var(--white);
   font-size: var(--fs-9);
   min-height: 60px;
@@ -1188,6 +1227,18 @@ section {
 .email-field::placeholder { color: inherit; }
 
 
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .email-field {
+      width: 170%; /* Sets the width as intended */
+      position: relative; /* Allows for manual adjustment */
+      left: 50%; /* Moves the starting point to the middle */
+      transform: translateX(-50%); /* Correctly centers the element */
+      margin: auto;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+  }
+}
 
 
 /* .rotate {
