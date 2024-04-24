@@ -1230,7 +1230,7 @@ section {
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
   .email-field {
-      width: 170%; /* Sets the width as intended */
+      width: 150%; /* Sets the width as intended */
       position: relative; /* Allows for manual adjustment */
       left: 50%; /* Moves the starting point to the middle */
       transform: translateX(-50%); /* Correctly centers the element */
