@@ -1238,6 +1238,12 @@ section {
       box-sizing: border-box;
       margin-bottom: 20px;
   }
+
+  .email-field::placeholder {
+    text-align: center; /* Center placeholder text - works in some browsers */
+    color: rgba(255, 255, 255, 0.7); /* Lighter white color for placeholder */
+}
+
 }
 
 
